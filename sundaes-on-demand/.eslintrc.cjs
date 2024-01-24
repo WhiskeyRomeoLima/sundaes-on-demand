@@ -11,6 +11,7 @@ module.exports = {
     "plugin:testing-library/react",
     "plugin:vitest/recommended",
   ],
+  "react/prop-types": [false, ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parserOptions: { ecmaVersion: "latest", sourceType: "module" },
   settings: { react: { version: "18.2" } },
