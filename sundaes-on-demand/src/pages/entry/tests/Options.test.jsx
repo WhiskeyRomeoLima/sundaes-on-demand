@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import Options from "../Options";
 
-test("displays image for each scoop option from server", async () => {
+test("displays images for scoop options from server", async () => {
   render(<Options optionType="scoops" />);
 
   // find images
@@ -14,7 +14,7 @@ test("displays image for each scoop option from server", async () => {
   expect(altText).toEqual(["Chocolate scoop", "Vanilla scoop"]);
 });
 
-test("display image for each topping option from server", async () => {
+test("display images for topping options from server", async () => {
   render(<Options optionType="toppings" />)
 
   //find images
@@ -23,6 +23,6 @@ test("display image for each topping option from server", async () => {
 
   //confirm alt text of images
   //@ts-ignore
-  const images = toppingImages.map((element) => element.alt)
-  expect(images).toEqual(['Cherries topping', 'M&Ms topping', 'Hot Fudge topping'])
+  const images = toppingImages.map((img) => img.alt)
+  expect(images).toEqual(['Cherries topping', 'M&Ms topping', 'Hot fudge topping'])
 }) 
